@@ -1,0 +1,67 @@
+7/5/25
+1)javaScript
+2)variables
+3)Data types
+4)operators
+5)coditional
+6)loops
+7)functions
+•	#hackerrank
+•	#leet code #js,reactjs
+#java,python,c++;
+•	#codechef
+Written test : coding test
+#technical
+#codit
+
+#java
+
+Data types:
+1)dynamic type language.
+Two types:
+1)primitive data type
+2)Non-primitive data type : objects , arrays
+To check the data type -typeof
+
+1)primitive data type : predefined  ; we can store single values
+2)numbers: integers,floats
+3)string : stream of characters enclosed in quotes
+--single , double , backtick quotes;
+4)Boolean : true or false
+5)Null : empty value or no value
+6)undefined ; --declared variable with no value
+
+1)Numbers :
+Ex: 1, -1, -4.4, 5.6
+2) Strings: Stream of characters enclosed in quotes
+---single, double, backtick quotes;
+Single and double works same
+Back ticks introduced in ES6 version.
+It provides extra functionality; we can insert the variables into them.
+
+String Concatenation:
+Reactjs student=sai kumar
+code:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x=null;
+        document.write(x)
+        document.write(typeof(x))
+        // let a = "Nithin"
+        // let b= "Reddy"
+        // let age=21
+        // let greeting = `I am ${a+b}, my age is ${21} years old`
+        // console.log(greeting)
+        // console.log("hi+a+b")
+        // console.log(`hi+${a+b}`)
+        // document.write(`hi+${a+b}`) 
+    </script>
+</body>
+</html>
