@@ -1,0 +1,78 @@
+24/01/25
+Arrow functions:
+--Es6 version 
+--more readable and more structure
+--annonymous functions(lambda functions)
+--without function name but they are assigned to a variable
+
+
+Example:
+Arrow functions with out parameter
+let c = () = > {
+    console.log("hi nithin")
+}
+c()
+
+Arrow function with parameter
+Example:
+let x =(x,y)=>{
+    console.log(x+y)
+}
+x(20,30)
+y(40,50)   /// output:50 
+
+arrow function with one argument:
+#with out using paranthesis
+Example:
+let greet=x=>console.log(x);
+greet("hello")
+
+arrow function with out argument:
+Example:
+let greet=()=>console.log("hello")
+ greet()
+
+
+
+Example: Arrow functions as an expression
+let age = 18;
+let welcome = (age<18) ? 
+()=>console.log("chaitanya") : 
+()=>console.log("hi madhu");
+welcome()
+
+Example:
+function task1(){
+    console.log("Task1 : start")
+}
+function task2(){
+    console.log("Task2 : start")
+}
+function task3(){
+    console.log("Task3 : start")
+}
+task1()
+task2()
+task3()
+Example:
+console.log("hi nithn");
+setTimeout(() => {
+    console.log(" hii i am waiting ")
+},5000);
+console.log("i am in lab")   /// hi nithin
+				I am in lab
+				Hi I am waiting
+javaScript callbacks:
+a call back function is function that is passed argument to another function;
+Example:
+function greet(name,callback){
+    console.log("hello,${name}!" )
+    callback();
+}
+function sayGoodbye(){
+    console.log("Goodbye")
+}
+greet("nithin",sayGoodbye)
+output:
+hello,${name}!
+ Goodbye
