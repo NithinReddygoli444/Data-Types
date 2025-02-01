@@ -1,0 +1,28 @@
+01/02/25:
+Q1)
+ let age = parseInt(prompt("Enter your age:"))
+        
+        if(age>=18 ){
+            let citizen = confirm("Are you a citizen?")
+        let passedCitizenTest = confirm("Have you passed citizen test?")
+            document.write("You are eligible to vote")
+            
+            if(age>=18 && !citizen && passedCitizenTest){
+                document.write("You are eligible to vote")
+            }  
+        }else{
+            document.write("You are not eligible to vote")  }
+Q2)
+let amount = parseInt(prompt("Enter the amount you spent:"))
+
+// if(amount >= 100) {
+//     let discount = amount * 0.2
+//     let finalAmount = amount - discount
+//     document.write("You are eligible for get 20% discount.")
+// } else if(amount > 50 && amount <= 100) {
+//     let discount = amount * 0.1
+//     let finalAmount = amount - discount
+//     document.write("You are eligible for get 10% discount.")
+// }else if(amount<50){
+//     document.write("You are not eligible for discount.")
+// }
