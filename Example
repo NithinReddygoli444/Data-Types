@@ -1,0 +1,76 @@
+11/02/25
+App.css
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app-container {
+  background-color: aqua;
+  display: flex;
+  flex-direction: row;
+  
+  gap: 20px;
+  padding: 20px;
+}
+
+.profile-card {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+}
+
+.profile-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.profile-card h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.profile-card p {
+  color: #666;
+}
+App.js
+import React from "react";
+import "./App.css";
+const ProfileCard = ({ name, greeting, imageSrc }) => {
+  return (
+    <div className="profile-card">
+      <img src={imageSrc} alt={name} className="w-24 h-24 rounded-full mx-auto" />
+      <h2 className="text-lg font-semibold mt-2">{name}</h2>
+      <p className="text-gray-600">{greeting}</p>
+    </div>
+  );
+};
+
+const App = () => {
+  const users = [
+    { name: "NBK", greeting: "Hii!", imageSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9GQiCggvGVh_OPBmf3VTNHxzF_CAsG313Tg&s" },
+    { name: "nithin", greeting: "Hii!", imageSrc: "https://images.filmibeat.com/img/popcorn/profile_photos/nitin-20220810091420-4035.jpg" },
+    { name: "surya", greeting: "Hii!", imageSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSux4-clKvwgU6Cdw86-DuZvzfXiMxFdwzkfg&s" }
+  ]
+
+  return (
+    <div className="app-container">
+      {users.map((user, index) => (
+        <ProfileCard key={index} {...user} />
+      ))}
+    </div>
+  );
+};
+
+export default App;
