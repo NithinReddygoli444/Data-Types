@@ -1,0 +1,75 @@
+17/02/25
+Event handling in react:
+---event handling in react is how you make your app do some thing when the user interacts with it,like clicking the button, submitting a form.
+1)clicking a button(onclick)
+2)pressing a key (keyDown)
+3)moving the mouse (onmouse
+--How to use events in react:
+--use camelCase for event names.
+--pass a function to the event (not to a function call)
+This function will run when the event happens
+a)Click Event
+Example:
+function App(){
+  const handleClick=()=>{
+    alert("Button Clicked")
+  };
+  return (
+    <div>
+      <button onClick={handleClick}>Click Me</button>
+    </div>
+    );
+}
+export default App;
+b)change event (onchange);
+forms:
+this happens when you type in text box.
+Keypoints:
+Target is a property of the event object,and the is predefined by javascript for DOM events.
+Example:
+import React,{useState} from 'react';
+import './App.css'
+function App(){
+    const[isHovered,setIsHovered]= useState(false);
+    const handleMouseEnter=()=>{
+        setIsHovered(true);
+    }
+    const handleMouseLeave=()=>{
+        setIsHovered(false);
+    };
+    return(
+    <div>
+        <button onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{
+            backgroundcolor:isHovered ?'lightblue':'lightray',
+            color:isHovered ? 'white':'black'
+        }}>hover me</button>
+        {isHovered && <p>mouse is over the button</p>}
+    </div>
+    )
+}
+export default App;
+
+key Events:
+(onkeyDown)
+Key is passed on the key board:
+Syntax:
+onkeyDown={keyDownFunction}
+Example:
+import React,{useState} from 'react';
+import './App.css';
+ function App(){
+    const[key, setKey]=useState="";
+    const handleKeyDown=(event)=>{
+        setKey(event.key);
+    }
+    return(
+        <div className='app'>
+            <h1>welcome to h it solutions</h1>
+            {key &&<h2>pressed key:{key}</h2>}
+            <input type='text' onKeyDown={handleKeyDown} placeholder='press here'/>
+             </div>
+    )
+}
+export default App;
